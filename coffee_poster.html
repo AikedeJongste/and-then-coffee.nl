@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OK But First Coffee</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anton:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #3a3a3a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Anton', sans-serif;
+        }
+        
+        .poster {
+            text-align: center;
+            color: white;
+            font-size: 4rem;
+            font-weight: 400;
+            line-height: 0.9;
+            letter-spacing: 0.05em;
+            position: relative;
+        }
+        
+        .word {
+            display: block;
+            margin: 0.1em 0;
+        }
+        
+        .coffee-container {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .coffee-crossed {
+            position: relative;
+            color: white;
+        }
+        
+        .strikethrough {
+            position: absolute;
+            top: 50%;
+            left: -10%;
+            right: -10%;
+            height: 8px;
+            background: #ff0000;
+            transform: rotate(-8deg) translateY(-50%);
+            border-radius: 4px;
+        }
+        
+        .strikethrough::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: 20%;
+            right: 30%;
+            height: 12px;
+            background: #cc0000;
+            transform: rotate(3deg);
+            border-radius: 6px;
+        }
+        
+        .handwritten-me {
+            position: absolute;
+            color: #ff0000;
+            font-family: 'Brush Script MT', cursive;
+            font-size: 3.5rem;
+            font-weight: bold;
+            transform: rotate(-5deg);
+            right: -150px;
+            top: 50%;
+            transform-origin: center;
+            transform: translateY(-50%) rotate(-5deg);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        @media (max-width: 768px) {
+            .poster {
+                font-size: 2.5rem;
+                padding: 2rem;
+            }
+            
+            .handwritten-me {
+                font-size: 2rem;
+                right: -80px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .poster {
+                font-size: 2rem;
+            }
+            
+            .handwritten-me {
+                font-size: 1.5rem;
+                right: -60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="poster">
+        <span class="word">OK.</span>
+        <span class="word">BUT</span>
+        <span class="word">FIRST</span>
+        <div class="coffee-container">
+            <span class="word coffee-crossed">COFFEE</span>
+            <div class="strikethrough"></div>
+            <span class="handwritten-me">ME</span>
+        </div>
+    </div>
+</body>
+</html>
